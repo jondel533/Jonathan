@@ -20,6 +20,8 @@
             animation: gradientShift 15s ease infinite;
             min-height: 100vh;
             padding-bottom: 40px;
+            position: relative;
+            overflow-x: hidden;
         }
 
         @keyframes gradientShift {
@@ -28,10 +30,144 @@
             100% { background-position: 0% 50%; }
         }
 
+        /* Floating Orbs */
+        .orb {
+            position: fixed;
+            border-radius: 50%;
+            opacity: 0.3;
+            filter: blur(40px);
+            animation: float 20s infinite ease-in-out;
+            pointer-events: none;
+        }
+
+        .orb-1 {
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, #ff006e, #8338ec);
+            top: 10%;
+            left: 10%;
+            animation: float 25s infinite ease-in-out;
+        }
+
+        .orb-2 {
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, #00f5ff, #0099ff);
+            top: 50%;
+            right: 5%;
+            animation: float 30s infinite ease-in-out reverse;
+        }
+
+        .orb-3 {
+            width: 180px;
+            height: 180px;
+            background: radial-gradient(circle, #ffbe0b, #fb5607);
+            bottom: 10%;
+            left: 5%;
+            animation: float 28s infinite ease-in-out;
+        }
+
+        .orb-4 {
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, #06ffa5, #00f2fe);
+            top: 20%;
+            right: 15%;
+            animation: float 26s infinite ease-in-out reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(30px, -30px); }
+            50% { transform: translate(-20px, 20px); }
+            75% { transform: translate(20px, 30px); }
+        }
+
+        /* Floating Particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            animation: drift 20s infinite linear;
+        }
+
+        @keyframes drift {
+            0% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(100px);
+                opacity: 0;
+            }
+        }
+
+        /* Glowing Lines */
+        .glow-line {
+            position: fixed;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .line-1 {
+            width: 2px;
+            height: 300px;
+            background: linear-gradient(180deg, rgba(255, 0, 110, 0.5), transparent);
+            top: 5%;
+            left: 20%;
+            box-shadow: 0 0 20px rgba(255, 0, 110, 0.6);
+            animation: glow 3s ease-in-out infinite;
+        }
+
+        .line-2 {
+            width: 300px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(0, 149, 255, 0.5), transparent);
+            top: 40%;
+            right: 10%;
+            box-shadow: 0 0 20px rgba(0, 149, 255, 0.6);
+            animation: glow 4s ease-in-out infinite reverse;
+        }
+
+        .line-3 {
+            width: 2px;
+            height: 250px;
+            background: linear-gradient(180deg, rgba(0, 245, 165, 0.5), transparent);
+            bottom: 15%;
+            right: 25%;
+            box-shadow: 0 0 20px rgba(0, 245, 165, 0.6);
+            animation: glow 3.5s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.8; }
+        }
+
         .container {
             max-width: 950px;
             margin: 0 auto;
             padding: 20px;
+            position: relative;
+            z-index: 2;
         }
 
         header {
@@ -45,6 +181,26 @@
             backdrop-filter: blur(10px);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             animation: slideDown 0.8s ease-out;
+            position: relative;
+        }
+
+        /* Glow effect around header */
+        header::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(240, 147, 251, 0.1));
+            border-radius: 25px;
+            z-index: -1;
+            animation: headerGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes headerGlow {
+            0%, 100% { box-shadow: 0 0 30px rgba(102, 126, 234, 0.3); }
+            50% { box-shadow: 0 0 60px rgba(240, 147, 251, 0.5); }
         }
 
         header:hover {
@@ -77,6 +233,25 @@
             border: 5px solid white;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             animation: pulse 2s ease-in-out infinite;
+            position: relative;
+        }
+
+        /* Ring effect around profile image */
+        .profile-image::after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border: 2px solid rgba(240, 147, 251, 0.5);
+            border-radius: 50%;
+            animation: spin 6s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         .profile-image:hover {
@@ -88,6 +263,8 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            position: relative;
+            z-index: 1;
         }
 
         @keyframes pulse {
@@ -287,6 +464,8 @@
             margin-top: 50px;
             font-weight: 600;
             font-size: 1.05em;
+            position: relative;
+            z-index: 2;
         }
 
         @media (max-width: 768px) {
@@ -310,10 +489,28 @@
                 width: 130px;
                 height: 130px;
             }
+
+            .orb {
+                opacity: 0.15;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Floating Orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+
+    <!-- Glowing Lines -->
+    <div class="glow-line line-1"></div>
+    <div class="glow-line line-2"></div>
+    <div class="glow-line line-3"></div>
+
+    <!-- Floating Particles -->
+    <div class="particles" id="particles"></div>
+
     <div class="container">
         <header>
             <div class="profile-image">
@@ -332,7 +529,7 @@
                 process excellence and analytical insight.
             </p>
             <div class="highlight">
-                <strong>📍 Employee Type:</strong> DVC - Regular | <strong>Management Level:</strong> Analyst | <strong>FTE:</strong> 100.00%
+                <strong>📋 Employee Type:</strong> DVC - Regular | <strong>Management Level:</strong> Analyst | <strong>FTE:</strong> 100.00%
             </div>
         </section>
 
@@ -419,5 +616,24 @@
             <p>✨ &copy; 2026 Jonathan Delgado. All rights reserved. ✨</p>
         </footer>
     </div>
+
+    <script>
+        // Generate floating particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        createParticles();
+    </script>
 </body>
 </html>
