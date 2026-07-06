@@ -38,14 +38,19 @@
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             margin: 0 auto 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 60px;
-            color: white;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            background: #f0f0f0;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         h1 {
@@ -189,7 +194,9 @@
 <body>
     <div class="container">
         <header>
-            <div class="profile-image">JD</div>
+            <div class="profile-image">
+                <img src="jonathan-delgado.jpg" alt="Jonathan Delgado">
+            </div>
             <h1>Jonathan Delgado</h1>
             <div class="job-title">Business Process Analyst</div>
             <div class="company">DXC (Supervisory Organization: DXC () - 6503431 Philippines BFS)</div>
