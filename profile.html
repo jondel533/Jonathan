@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jonathan Sibulo Delgado - Professional Profile | Business Process Analyst">
+    <meta name="keywords" content="Jonathan Delgado, Professional Profile, Business Analyst, Manila">
+    <meta name="author" content="Jonathan Sibulo Delgado">
+    <title>Jonathan Sibulo Delgado - Professional Profile</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #0078d4;
+            --secondary-color: #50e6ff;
+            --dark-bg: #1a1a1a;
+            --light-bg: #ffffff;
+            --text-dark: #1f1f1f;
+            --text-light: #6f7b8c;
+            --border-color: #e0e0e0;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--light-bg);
+            transition: background-color 0.3s ease, color 0.3s ease;
+            overflow-x: hidden;
+        }
+
+        body.dark-mode {
+            --light-bg: #1a1a1a;
+            --text-dark: #ffffff;
+            --text-light: #b0b8c1;
+            --border-color: #333333;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode nav {
+            background: rgba(26, 26, 26, 0.95);
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        nav .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        nav .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        nav .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            transition: color 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #0078d4 0%, #50e6ff 100%);
+            color: white;
+            text-align: center;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            animation: bounce 3s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .hero-text .motto {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--text-dark);
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--light-bg);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .about-highlights {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .highlight-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        body.dark-mode .highlight-card {
+            background: #252525;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .highlight-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Professional Highlights */
+        .highlights {
+            background: linear-gradient(135deg, rgba(0, 120, 212, 0.05) 0%, rgba(80, 230, 255, 0.05) 100%);
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .highlight-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        body.dark-mode .highlight-item {
+            background: #252525;
+        }
+
+        .highlight-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .highlight-item i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .highlight-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .highlight-item p {
+            color: var(--text-light);
+        }
+
+        /* Certifications */
+        .certifications {
+            background: var(--light-bg);
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .cert-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        body.dark-mode .cert-card {
+            background: #252525;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cert-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .cert-card h3 {
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-card .issuer {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-card .date {
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        /* Career Timeline */
+        .career {
+            background: linear-gradient(135deg, rgba(0, 120, 212, 0.05) 0%, rgba(80, 230, 255, 0.05) 100%);
+        }
+
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .timeline-item {
+            margin-bottom: 3rem;
+            width: 45%;
+        }
+
+        .timeline-item:nth-child(odd) {
+            margin-left: 0;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            margin-left: auto;
+            text-align: left;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode .timeline-content {
+            background: #252525;
+        }
+
+        .timeline-content:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-5px);
+        }
+
+        .timeline-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content .position {
+            color: var(--text-dark);
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .timeline-content .date {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            width: 16px;
+            height: 16px;
+            background: white;
+            border: 4px solid var(--primary-color);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        /* Accomplishments */
+        .accomplishments {
+            background: var(--light-bg);
+        }
+
+        .accomplishments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .accomplishment-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        body.dark-mode .accomplishment-card {
+            background: #252525;
+        }
+
+        .accomplishment-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .accomplishment-card i {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .accomplishment-card h3 {
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .accomplishment-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Interests */
+        .interests {
+            background: linear-gradient(135deg, rgba(0, 120, 212, 0.05) 0%, rgba(80, 230, 255, 0.05) 100%);
+        }
+
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+        }
+
+        .interest-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode .interest-card {
+            background: #252525;
+        }
+
+        .interest-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .interest-card i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .interest-card h3 {
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .interest-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Gallery */
+        .gallery {
+            background: var(--light-bg);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            height: 250px;
+            background: var(--border-color);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 120, 212, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            color: white;
+            font-weight: 600;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #0078d4 0%, #50e6ff 100%);
+            color: white;
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact .section-title::after {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .contact-card i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-card a:hover {
+            opacity: 0.8;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: white;
+            color: var(--primary-color);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 2rem;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.95rem;
+        }
+
+        body.dark-mode footer {
+            background: #0a0a0a;
+        }
+
+        footer .quote {
+            font-style: italic;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav .nav-links {
+                gap: 1rem;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                width: calc(100% - 60px);
+                margin-left: 60px !important;
+                text-align: left !important;
+            }
+
+            .timeline-dot {
+                left: 20px;
+            }
+
+            .highlights-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 2rem 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="logo">JSD</a>
+        <ul class="nav-links">
+            <li><a onclick="scrollToSection('about')">About</a></li>
+            <li><a onclick="scrollToSection('highlights')">Highlights</a></li>
+            <li><a onclick="scrollToSection('career')">Career</a></li>
+            <li><a onclick="scrollToSection('accomplishments')">Achievements</a></li>
+            <li><a onclick="scrollToSection('contact')">Contact</a></li>
+            <button class="theme-toggle" onclick="toggleDarkMode()">
+                <i class="fas fa-moon"></i>
+            </button>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Jonathan Sibulo Delgado</h1>
+                <p class="motto">"Committed to continuous growth, excellence, and meaningful connections."</p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary">View Profile</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="jonathan-delgado.jpg.png" alt="Jonathan Sibulo Delgado">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    Welcome to my professional profile. I'm Jonathan Sibulo Delgado, a dedicated Business Process Analyst 
+                    with a passion for operational excellence and continuous improvement. Based in Manila, Philippines, 
+                    I bring a wealth of experience in optimizing business processes and driving organizational success.
+                </p>
+                <p>
+                    My career is built on a foundation of commitment to continuous learning, excellence in execution, 
+                    and building meaningful professional relationships. I thrive in dynamic environments where I can 
+                    contribute to strategic initiatives and help organizations achieve their goals.
+                </p>
+                <p>
+                    Currently working with DXC, I focus on Business Process Transactions, workflow optimization, and 
+                    delivering value through process excellence and analytical insight.
+                </p>
+                <div class="about-highlights">
+                    <div class="highlight-card">
+                        <h3>Location</h3>
+                        <p>Manila, Philippines</p>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>Organization</h3>
+                        <p>DXC Technologies</p>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>Role</h3>
+                        <p>Business Process Analyst</p>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>Status</h3>
+                        <p>Full-Time</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="jonathan-delgado.jpg.png" alt="Jonathan Delgado" style="width: 100%; border-radius: 12px; box-shadow: var(--shadow-lg);">
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Highlights -->
+    <section class="highlights" id="highlights">
+        <h2 class="section-title">Professional Highlights</h2>
+        <div class="highlights-grid">
+            <div class="highlight-item">
+                <i class="fas fa-users"></i>
+                <h3>Leadership</h3>
+                <p>Guiding teams with vision and purpose to achieve organizational objectives</p>
+            </div>
+            <div class="highlight-item">
+                <i class="fas fa-comments"></i>
+                <h3>Communication</h3>
+                <p>Clear and effective dialogue to build understanding and drive collaboration</p>
+            </div>
+            <div class="highlight-item">
+                <i class="fas fa-handshake"></i>
+                <h3>Collaboration</h3>
+                <p>Working seamlessly with diverse teams to create synergy and shared success</p>
+            </div>
+            <div class="highlight-item">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Problem Solving</h3>
+                <p>Innovative approaches to overcome challenges and optimize outcomes</p>
+            </div>
+            <div class="highlight-item">
+                <i class="fas fa-star"></i>
+                <h3>Customer Focus</h3>
+                <p>Prioritizing client satisfaction and delivering exceptional value</p>
+            </div>
+            <div class="highlight-item">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Continuous Learning</h3>
+                <p>Committed to ongoing development and staying ahead of industry trends</p>
+            </div>
+            <div class="highlight-item">
+                <i class="fas fa-sync-alt"></i>
+                <h3>Adaptability</h3>
+                <p>Flexible and responsive to changing business environments and demands</p>
+            </div>
+            <div class="highlight-item">
+                <i class="fas fa-tasks"></i>
+                <h3>Teamwork</h3>
+                <p>Committed to collective success and shared organizational achievements</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Learning -->
+    <section class="certifications">
+        <h2 class="section-title">Certifications & Learning</h2>
+        <div class="certifications-grid">
+            <div class="cert-card">
+                <div class="cert-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3>Six Sigma Green Belt</h3>
+                <p class="issuer">Process Excellence Institute</p>
+                <p class="date">2023</p>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3>Advanced Business Analysis</h3>
+                <p class="issuer">International Institute of Business Analysis</p>
+                <p class="date">2022</p>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3>Microsoft Project Management</h3>
+                <p class="issuer">Microsoft Learn</p>
+                <p class="date">2023</p>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3>Agile Methodology Certification</h3>
+                <p class="issuer">Agile Training Institute</p>
+                <p class="date">2022</p>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3>Digital Transformation</h3>
+                <p class="issuer">DXC Learning Academy</p>
+                <p class="date">2024</p>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3>Leadership Essentials</h3>
+                <p class="issuer">Corporate Development Center</p>
+                <p class="date">2023</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Journey -->
+    <section class="career" id="career">
+        <h2 class="section-title">Career Journey</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>DXC Technologies</h3>
+                    <p class="position">Business Process Analyst</p>
+                    <p class="date">Feb 2026 - Present</p>
+                    <p>Leading business process optimization initiatives, managing transaction workflows, and driving operational efficiency improvements for key stakeholders.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Previous Organization</h3>
+                    <p class="position">Business Operations Specialist</p>
+                    <p class="date">2023 - 2026</p>
+                    <p>Supported operational teams in process improvement, documentation, and quality assurance initiatives.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Early Career</h3>
+                    <p class="position">Business Support Associate</p>
+                    <p class="date">2021 - 2023</p>
+                    <p>Gained foundational experience in business processes, customer service, and operational support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accomplishments -->
+    <section class="accomplishments" id="accomplishments">
+        <h2 class="section-title">Accomplishments</h2>
+        <div class="accomplishments-grid">
+            <div class="accomplishment-card">
+                <i class="fas fa-trophy"></i>
+                <h3>Process Optimization Award</h3>
+                <p>Recognized for implementing workflow improvements that increased team efficiency by 35%</p>
+            </div>
+            <div class="accomplishment-card">
+                <i class="fas fa-star"></i>
+                <h3>Excellence in Collaboration</h3>
+                <p>Awarded for outstanding teamwork and cross-functional partnership initiatives</p>
+            </div>
+            <div class="accomplishment-card">
+                <i class="fas fa-rocket"></i>
+                <h3>Digital Transformation Project</h3>
+                <p>Led successful implementation of process automation, reducing manual tasks by 40%</p>
+            </div>
+            <div class="accomplishment-card">
+                <i class="fas fa-heart"></i>
+                <h3>Volunteer Leadership</h3>
+                <p>Mentored junior staff and contributed to community development initiatives</p>
+            </div>
+            <div class="accomplishment-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Performance Excellence</h3>
+                <p>Consistently exceeded performance targets and KPIs in assigned responsibilities</p>
+            </div>
+            <div class="accomplishment-card">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Innovation Initiative</h3>
+                <p>Developed and presented innovative solutions for operational challenges</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Interests -->
+    <section class="interests">
+        <h2 class="section-title">Personal Interests</h2>
+        <div class="interests-grid">
+            <div class="interest-card">
+                <i class="fas fa-book"></i>
+                <h3>Learning & Development</h3>
+                <p>Passionate about continuous growth and acquiring new skills</p>
+            </div>
+            <div class="interest-card">
+                <i class="fas fa-microchip"></i>
+                <h3>Technology & Innovation</h3>
+                <p>Exploring emerging technologies and digital transformation trends</p>
+            </div>
+            <div class="interest-card">
+                <i class="fas fa-users"></i>
+                <h3>Community Engagement</h3>
+                <p>Active in community projects and social responsibility initiatives</p>
+            </div>
+            <div class="interest-card">
+                <i class="fas fa-family"></i>
+                <h3>Family & Personal Growth</h3>
+                <p>Committed to personal development and maintaining work-life balance</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery">
+        <h2 class="section-title">Photo Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x250?text=Professional+Event" alt="Professional Event">
+                <div class="gallery-overlay">Professional Events</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x250?text=Team+Activities" alt="Team Activities">
+                <div class="gallery-overlay">Team Activities</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x250?text=Training+Session" alt="Training">
+                <div class="gallery-overlay">Training Sessions</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x250?text=Community+Work" alt="Community">
+                <div class="gallery-overlay">Community Work</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x250?text=Recognition" alt="Recognition">
+                <div class="gallery-overlay">Recognitions</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x250?text=Milestones" alt="Milestones">
+                <div class="gallery-overlay">Milestones</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <a href="mailto:jonathan.delgado@dxc.com">jonathan.delgado@dxc.com</a>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-linkedin"></i>
+                <h3>LinkedIn</h3>
+                <a href="https://linkedin.com" target="_blank">Connect with me</a>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-comments"></i>
+                <h3>Microsoft Teams</h3>
+                <a href="#">jonathan.delgado</a>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Location</h3>
+                <p>Manila, Philippines</p>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <a href="#" class="download-btn">
+                <i class="fas fa-download"></i> Download Resume
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="quote">
+            "Success comes from continuous learning, dedication, and making a positive impact on others."
+        </div>
+        <p>&copy; 2024 Jonathan Sibulo Delgado. All rights reserved.</p>
+        <p>Designed with care | Committed to Excellence</p>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            const icon = document.querySelector('.theme-toggle i');
+            if (document.body.classList.contains('dark-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Load saved theme
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                toggleDarkMode();
+            }
+        });
+
+        // Smooth scrolling
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.boxShadow = 'var(--shadow-lg)';
+            } else {
+                nav.style.boxShadow = 'var(--shadow)';
+            }
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'slideDown 0.8s ease-out forwards';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
